@@ -23,12 +23,18 @@ public class Spawner : MonoBehaviour
             elapsed = 0;
         }
     }
+
+    // Spawn UI elements at random locations on the visible canvas
     private void Spawn()
     {
         GameObject square = Instantiate(playerPrefab, GetComponent<RectTransform>());
-        int r = Random.Range(-5, 5);
-        square.transform.position = new Vector3(r, r, r);
-        //Destroy(square.gameObject);
+        RectTransform rt = square.GetComponent<RectTransform>();
+        RectTransform canvasRT = GetComponent<RectTransform>();
+        float width = canvasRT.sizeDelta.x;
+        float height = canvasRT.sizeDelta.y;
+        float randomX = Random.Range(-width / 2, width / 2);
+        float randomY = Random.Range(-height / 2, height / 2);
+        rt.anchoredPosition = new Vector2(randomX, randomY);
     }
 }
 
