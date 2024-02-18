@@ -13,14 +13,16 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            myScore.AddPoints(1);
-        }
+        /* if (Input.GetButtonDown("Jump"))
+         {
+             myScore.AddPoints(1);
+         }
+        */
     }
 
     public void DestroySelf()
     {
         Destroy(gameObject);
+        myScore.AddPoints(1);
     }
 }
