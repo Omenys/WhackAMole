@@ -26,9 +26,9 @@ public class Spawner : MonoBehaviour
     private void Spawn()
     {
         GameObject square = Instantiate(playerPrefab, GetComponent<RectTransform>());
-        float x = Random.Range(0, GetComponent<RectTransform>().rect.width);
-        float y = Random.Range(0, GetComponent<RectTransform>().rect.height);
-        square.transform.position = new Vector2(x, y);
+        int r = Random.Range(-5, 5);
+        square.transform.position = new Vector3(r, r, r);
+        //Destroy(square.gameObject);
     }
 }
 

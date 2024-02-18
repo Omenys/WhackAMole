@@ -14,9 +14,9 @@ public class Score : MonoBehaviour
         myText = FindObjectOfType<TMP_Text>();
 
         GameObject square = Instantiate(squarePrefab, transform);
-        float x = Random.Range(0, GetComponent<RectTransform>().rect.width);
-        float y = Random.Range(0, GetComponent<RectTransform>().rect.height);
-        square.transform.position = new Vector2(x, y);
+        //float x = Random.Range(0, GetComponent<RectTransform>().rect.width);
+        //float y = Random.Range(0, GetComponent<RectTransform>().rect.height);
+        //square.transform.position = new Vector2(x, y);
     }
 
     // Update is called once per frame
