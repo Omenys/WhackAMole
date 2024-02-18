@@ -18,4 +18,9 @@ public class Player : MonoBehaviour
             myScore.AddPoints(1);
         }
     }
+
+    public void DestroySelf()
+    {
+        Destroy(gameObject);
+    }
 }
