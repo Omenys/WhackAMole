@@ -41,6 +41,7 @@ public class Score : MonoBehaviour
         myText.text = score.ToString();
     }
 
+    // Increases difficulty based on player score
     public void IncreaseDifficulty()
     {
         if (score >= 0 && score < 10)
@@ -58,12 +59,12 @@ public class Score : MonoBehaviour
             spawner.timeBetweenSpawns = 0.75f;
             mole_decay = 1.0f;
         }
-        else if (score >= 50 && score <= 75)
+        else if (score >= 50 && score < 75)
         {
             spawner.timeBetweenSpawns = 0.50f;
             mole_decay = 0.75f;
         }
-        else if (score > 75)
+        else if (score >= 75)
         {
             spawner.timeBetweenSpawns = 0.25f;
             mole_decay = 0.75f;
