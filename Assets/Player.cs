@@ -3,11 +3,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     Score myScore;
+    [SerializeField] float delay = 3f;
 
     // Start is called before the first frame update
     void Start()
     {
         myScore = FindObjectOfType<Score>();
+        DestroyTimed(delay);
     }
 
     // Update is called once per frame
@@ -24,5 +26,10 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
         myScore.AddPoints(1);
+    }
+
+    public void DestroyTimed(float delay)
+    {
+        Destroy(gameObject, delay);
     }
 }

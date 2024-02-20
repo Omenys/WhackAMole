@@ -32,8 +32,4 @@ public class Score : MonoBehaviour
         myText.text = score.ToString();
     }
 
-    /*public void DestroySelf()
-    {
-        Destroy(gameObject);
-    }*/
 }

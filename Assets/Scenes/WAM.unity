@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPrefab: {fileID: 3284742557035546328, guid: 2d3cd799c1d3e6148ab89c1a3e909c2b, type: 3}
-  timeBetweenSpawns: 3
+  timeBetweenSpawns: 2
 --- !u!1 &1639858735
 GameObject:
   m_ObjectHideFlags: 0
