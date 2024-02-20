@@ -1,35 +1,42 @@
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Mole : MonoBehaviour
 {
     Score myScore;
-    [SerializeField] float delay = 3f;
+    [SerializeField] float _delay = 2.0f;
+
+    // Get and set delay timer
+    public float delay
+    {
+        get { return _delay; }
+        set { _delay = value; }
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         myScore = FindObjectOfType<Score>();
-        DestroyTimed(delay);
+        DestroyTimed();
     }
 
     // Update is called once per frame
     void Update()
     {
-        /* if (Input.GetButtonDown("Jump"))
-         {
-             myScore.AddPoints(1);
-         }
-        */
+
     }
 
+    // Destroy image on click
     public void DestroySelf()
     {
         Destroy(gameObject);
         myScore.AddPoints(1);
     }
 
-    public void DestroyTimed(float delay)
+    // Destroy image after set time
+    public void DestroyTimed()
     {
         Destroy(gameObject, delay);
     }
+
+
 }

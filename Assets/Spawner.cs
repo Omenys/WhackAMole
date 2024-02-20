@@ -4,13 +4,12 @@ public class Spawner : MonoBehaviour
 {
 
     [SerializeField] GameObject playerPrefab;
-    [SerializeField] float timeBetweenSpawns;
+    [SerializeField] float _timeBetweenSpawns = 3f;
     float elapsed = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -36,10 +35,11 @@ public class Spawner : MonoBehaviour
         float randomY = Random.Range(-height / 2, height / 2);
         rt.anchoredPosition = new Vector2(randomX, randomY);
     }
+
+    // Get and set time between spawns
+    public float timeBetweenSpawns
+    {
+        get { return _timeBetweenSpawns; }
+        set { _timeBetweenSpawns = value; }
+    }
 }
-
-
-/* GameObject g = Instantiate(playerPrefab, transform.position, Quaternion.identity);
-int r = Random.Range(-5, 5);
-g.transform.position = new Vector3(r, r, r);
-//Destroy(g.gameObject); */

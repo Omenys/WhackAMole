@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 6025003634895423635}
   - component: {fileID: 7512830703858226577}
   - component: {fileID: 2755617522296932066}
-  - component: {fileID: -6111016338954598943}
   - component: {fileID: 3024663491665815554}
+  - component: {fileID: -9141128766058950392}
   m_Layer: 5
   m_Name: Square
   m_TagString: Untagged
@@ -78,19 +78,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &-6111016338954598943
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3284742557035546328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c3852f6992931444ae12d88294f650a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 1.5
 --- !u!114 &3024663491665815554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: -6111016338954598943}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
+      - m_Target: {fileID: -9141128766058950392}
+        m_TargetAssemblyTypeName: Mole, Assembly-CSharp
         m_MethodName: DestroySelf
         m_Mode: 1
         m_Arguments:
@@ -147,3 +134,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &-9141128766058950392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284742557035546328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c3852f6992931444ae12d88294f650a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _delay: 3
